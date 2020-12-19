@@ -1,0 +1,346 @@
+
+
+@media only screen and (max-width:800px) {
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    .menu, .main, .right {
+      width: 100%;
+    }
+}
+
+
+body, html {
+    background-color: rgb(242, 242, 242, 0.3);
+    margin: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+
+header {
+    display: block;
+    background-color: white;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(220, 220, 220, 0.4);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.03);
+    z-index: 1;
+}
+
+
+#header-title {
+    float: left;
+    color: #0083ff;
+    margin-top: 0;
+    padding: 15px;
+    padding-bottom: 5px;
+    
+}
+
+
+#github-icon {
+    float: right;
+    position:relative;
+    margin: 15px 0px 0px 0px;
+    right: 100px;
+}
+
+
+
+#yt-icon {
+    float: right;
+    position:relative;
+    margin: 15px 0px 0px 0px;
+    right: 15px;
+
+}
+
+
+
+.box-container {
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    position: relative;
+    border-radius: 12px;
+    height: 500px;
+    width: 300px;
+    float: left;
+    margin: 20px;
+    padding: 25px;
+    overflow: auto;
+}
+
+
+
+#taskbox-longterm {
+    background-color: lightskyblue;
+    border: 5px solid rgb(54, 145, 176);
+}
+
+
+#taskbox-monthly {
+    background-color: orange;
+    border:5px solid rgb(204, 133, 0);
+}
+
+
+#taskbox-daily {
+    background-color: yellow;
+    border: 5px solid rgb(230, 230, 0);
+}
+
+
+#taskbox-done {
+    background-color: lightgreen;
+    border: 5px solid rgb(79, 227, 79);
+}
+
+
+.box-title {
+    position: relative;
+    left: 6px;
+    display: blcok;
+}
+
+
+
+.add-task-btn {
+    border-radius: 3px;
+    flex: 1 0 auto;
+    margin-left: 10px;
+    padding: 4px 8px;
+    position: relative;
+    text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: rgb(191, 191, 191);
+    border-radius: 10px;
+    right: 10px;
+    margin-top: 3px;
+    display: inline;
+    margin-bottom: 5px;
+}
+
+
+.add-task-btn:hover {
+    background-color: rgb(166, 166, 166);
+    transition: 0.2s;
+}
+
+
+.task-input {
+    bottom: 0;
+    width: 120px;
+    float: left;
+    display: none;
+    height: 30px;
+    position: relative;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    top: 5px;
+    
+}
+
+
+
+.confirm-btn {
+    background-color: rgb(0, 255, 0);
+    color: white;
+    border: 1px solid rgb(0, 230, 0);
+    border-radius: 12px;
+    float: right;
+    height: 30px;
+    display: none ;
+    position: relative;
+    top: 5px;
+
+}
+
+
+.confirm-btn:hover {
+    background-color: rgb(0, 204, 0);
+    transition: 0.2s;
+}
+
+
+
+.dragging {
+    opacity: 0.9;
+}
+
+
+.task {
+    clear: both;
+    display: block;
+    margin: 0 0 4px;
+    overflow: hidden;
+    text-decoration: none;
+    word-wrap: break-word;
+    color: #172b4d;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    padding: 5px 3px 5px 3px;
+    border: none;
+}
+
+
+.task-container {
+    width: 210px;
+    height: 300px;
+}
+
+
+
+.off {
+    display:none;
+    top: -500%;
+    left: -500%;
+}
+
+
+#right-click-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+
+.menu {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding-left: 0px;
+    padding-top: 0px;
+    width: 6rem;
+    height: auto;
+    color: #333;
+    border-radius: 5px;
+    list-style: none;
+}
+
+
+.menu-item {
+    height: 1.9rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+}
+
+.menu-item:active, .menu-item:hover {
+    background-color: rgb(230, 230, 230);
+    font-weight: 100;
+    display: block;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+
+  }
+  
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(170, 168, 168); 
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(170, 168, 168); 
+    background: grey; 
+}
+
+
+.task-box-hamburger {
+    float: right;
+    display: block;
+    position: relative;
+    margin: 0;
+    top: 0;
+    right: 0;
+    width:5px;
+    color: rgb(38, 38, 38);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+.hamburger-dropdown-menu {
+    display: none;
+    position: absolute;
+    margin-top: 30px;
+    right: 0;
+    background-color: white;
+    -webkit-backdrop-filter: blur(15px) saturate(120%);
+    backdrop-filter: blur(15px) saturate(120%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0, 2);
+    width: 6rem;
+    height: auto;
+    padding: 5px;
+}
+
+
+.hamburger-dropdown-menu .remove-all-tasks {
+   box-shadow: 0px 0px 5px rgb(0, 0, 0, 0, 2);
+   border-radius: 5px;
+   border: inherit;
+   background-color:rgb(242, 242, 242); 
+   padding-right: 5px;
+   padding-left: 1px;
+   cursor: pointer;
+   display: inline;
+}
+
+

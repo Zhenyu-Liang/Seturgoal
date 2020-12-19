@@ -1,0 +1,107 @@
+<!-- For clarification: l = long-term, m = monthly, d = daily  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seturgoal</title>
+</head>
+<body>
+    <header class="header-container">
+        <h2 id="header-title">Seturgoal</h2>
+        <a href="https://github.com/Zhenyu-Liang" target="_blank">
+            <img id="github-icon" src="img/github-icon.png" alt="">
+        </a>
+        <a href="https://www.youtube.com/channel/UCOFRK82acuISfU20_Hi5hUw" target="_blank">
+            <img id="yt-icon" src="img/yt-icon.png" alt="" width="40" height="32">
+        </a>
+    </header>
+    <main id="main-container">
+        <div class="box-container" onmouseleave="removeMenu()">
+            <div class="box" id="taskbox-longterm">
+                <div id="longterm-box-hamburger" class="task-box-hamburger">≡</div>
+                <div class="hamburger-dropdown-menu" id="longterm-box-hamburger-menu">
+                    <div class="remove-all-tasks">Remove All</div>
+                </div>
+                <p class="box-title" contenteditable="true">Long Term Goal</p>
+                <button id="longterm-btn" class="add-task-btn">+ Create New Task</button>
+                <div class="task-container" id="longterm-tasks" >
+                    <input class="task-input" id="l-enter-task" type="text" placeholder="Enter Your Task">
+                    <button id="lcbtn" class="confirm-btn">Add Task</button>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+
+            <div class="box" id="taskbox-monthly" onmouseleave="removeMenu()">
+                <div id="monthly-box-hamburger" class="task-box-hamburger">≡</div>
+                <div class="hamburger-dropdown-menu" id="monthly-box-hamburger-menu">
+                    <div class="remove-all-tasks">Remove All</div>
+                </div>
+                <p class="box-title" contenteditable="true">Monthly Goal</p>
+                <button id="monthly-btn" class="add-task-btn">+ Create New Task</button>
+                <div class="task-container" id="monthly-tasks">
+                    
+                    <input class="task-input" id="m-enter-task" type="text" placeholder="Enter Your Task">
+                    <button id="mcbtn" class="confirm-btn">Add Task</button>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            
+            <div class="box" id="taskbox-daily" onmouseleave="removeMenu()">
+                <div id="daily-box-hamburger" class="task-box-hamburger">≡</div>
+                <div class="hamburger-dropdown-menu" id="daily-box-hamburger-menu">
+                    <div class="remove-all-tasks">Remove All</div>
+                </div>
+                <p class="box-title" contenteditable="true">daily Goal</p>
+                <button id="daily-btn" class="add-task-btn">+ Create New Task</button>
+                <div class="task-container" id="daily-tasks">
+                    <input class="task-input" id="d-enter-task" type="text" placeholder="Enter Your Task">
+                    <button id="dcbtn" class="confirm-btn">Add Task</button>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="box" id="taskbox-done"  onmouseleave="removeMenu()">
+                <div id="done-box-hamburger" class="task-box-hamburger">≡</div>
+                <div class="hamburger-dropdown-menu" id="done-box-hamburger-menu">
+                    <div class="remove-all-tasks">Remove All</div>
+                </div>
+                <p class="box-title" contenteditable="true">Done</p>
+                <div class="task-container" id="done-tasks">
+                    
+                </div>
+
+            </div>
+            <div class="right-click-container" onmouseenter="showMenu()" onmouseleave="menuOffRemove()">
+                <ul class="right-click-menu off menu">
+                    <li class="menu-item" id="delete-task">Delete</li>
+                    <li class="menu-item" id="duplicate-task">Duplicate</li>
+                    <li class="menu-item" id="cancel">Cancel</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </main>
+    <script src="drag.js" defer></script>
+    <script src="addTask.js" defer></script>
+    <script src="menu.js" defer></script>
+    <script src="menuBox.js" defer></script>
+
+</body>
+</html>
