@@ -26,7 +26,8 @@
                 <div class="hamburger-dropdown-menu" id="longterm-box-hamburger-menu">
                     <div class="remove-all-tasks">Remove All</div>
                 </div>
-                <p class="box-title" contenteditable="true">Long Term Goal</p>
+                <p class="box-title" id="longterm-box-title" contenteditable>Long Term Goal</p>
+                <button id="longterm-title-btn" class="save-title-btn">Save</button>
                 <button id="longterm-btn" class="add-task-btn">+ Create New Task</button>
                 <div class="task-container" id="longterm-tasks" >
                     <input class="task-input" id="l-enter-task" type="text" placeholder="Enter Your Task">
@@ -43,7 +44,8 @@
                 <div class="hamburger-dropdown-menu" id="monthly-box-hamburger-menu">
                     <div class="remove-all-tasks">Remove All</div>
                 </div>
-                <p class="box-title" contenteditable="true">Monthly Goal</p>
+                <p class="box-title" id="monthly-box-title" contenteditable="true">Monthly Goal</p>
+                <button id="monthly-title-btn" class="save-title-btn">Save</button>
                 <button id="monthly-btn" class="add-task-btn">+ Create New Task</button>
                 <div class="task-container" id="monthly-tasks">
                     
@@ -61,7 +63,8 @@
                 <div class="hamburger-dropdown-menu" id="daily-box-hamburger-menu">
                     <div class="remove-all-tasks">Remove All</div>
                 </div>
-                <p class="box-title" contenteditable="true">daily Goal</p>
+                <p class="box-title" contenteditable="true" id="daily-box-title">daily Goal</p>
+                <button id="daily-title-btn" class="save-title-btn">Save</button>
                 <button id="daily-btn" class="add-task-btn">+ Create New Task</button>
                 <div class="task-container" id="daily-tasks">
                     <input class="task-input" id="d-enter-task" type="text" placeholder="Enter Your Task">
@@ -75,13 +78,13 @@
 
 
 
-
             <div class="box" id="taskbox-done"  onmouseleave="removeMenu()">
                 <div id="done-box-hamburger" class="task-box-hamburger">≡</div>
                 <div class="hamburger-dropdown-menu" id="done-box-hamburger-menu">
                     <div class="remove-all-tasks">Remove All</div>
                 </div>
-                <p class="box-title" contenteditable="true">Done</p>
+                <p class="box-title" contenteditable="true" id="done-box-title">Done</p>
+                <button id="done-title-btn" class="save-title-btn">Save</button>
                 <div class="task-container" id="done-tasks">
                     
                 </div>
@@ -98,6 +101,7 @@
 
         </div>
     </main>
+    <script src="js/saveEdits.js"></script>
     <script src="js/drag.js" defer></script>
     <script src="js/addTask.js" defer></script>
     <script src="js/menu.js" defer></script>

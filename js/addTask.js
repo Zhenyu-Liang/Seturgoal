@@ -1,5 +1,5 @@
 let taskBtnIdList = ["longterm-btn", "monthly-btn", "daily-btn"]
-let taskIdList = ["longterm", "monthly", "daily", "done"]
+taskIdList = ["longterm", "monthly", "daily", "done"]
 var taskContainer; // The current container
 var taskContainerDataVariable; 
 var count = 0
